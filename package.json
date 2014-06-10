@@ -1,11 +1,23 @@
 {
-  "name": "AclNeo4j",
+  "name": "Neo4acl",
   "version": "0.0.1",
-  "description": "Sistema di gestione di acl per neo4j",
+  "description": "ACL library on top of Neo4j",
   "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Giacomo Triggiano",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "~1.0.0",
+    "underscore": "~1.6.0",
+    "seraph": "~0.9.5",
+    "seraph-model": "~0.6.13",
+    "hat": "0.0.3",
+    "args-js": "~0.10.4",
+    "npm": "~1.4.14"
+  },
+  "devDependencies": {
+    "Faker": "~0.7.2"
+  }
 }
