@@ -15,7 +15,8 @@
     "seraph-model": "~0.6.13",
     "hat": "0.0.3",
     "args-js": "~0.10.4",
-    "npm": "~1.4.14"
+    "npm": "~1.4.14",
+    "string": "~1.8.1"
   },
   "devDependencies": {
     "Faker": "~0.7.2"
