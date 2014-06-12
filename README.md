@@ -12,6 +12,7 @@ npm install neo4acl
 
 ```
 ## Setup & configuration
+***
 
 ```
 #!javascript
@@ -61,3 +62,22 @@ options = {
 */
 
 ```
+## Api
+***
+### acl.addUserRoles( userId , roles, function(err, done) {})
+### acl.removeUserRoles( userId, roles, function(err, done) {})
+### acl.userRoles( userId, function(err, roles) {})
+### acl.userHasAllRoles( userId, roles, function(err, has) {})
+### acl.userHasAnyRole( userId, roles, function(err, has) {})
+### acl.addRoleParents( role, parents, function(err, done))
+### acl.removeRole( role, function(err, done) {})
+### acl.removeResource( resourceId, function(err, done) {})
+### acl.allow( roles, resources, permissions, function(err, done) {})
+### acl.removeAllow( roles, resources, permissions, function(err, done) {});
+### acl.allowedPermissions( userId, resources, function(err, resources) {});
+### acl.isAllowed(userId, resource, permissions, function(err, allowed) {});
+### acl.areAnyRolesAllowed( roles, resources, permissions, function(err, allowed) {});
+
+## Middleware generator
+***
+
