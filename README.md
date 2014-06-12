@@ -11,3 +11,13 @@ npm install neo4acl
 
 
 ```
+## Setup
+
+```
+#!javascript
+
+var Neo4ACL = require('neo4acl');
+
+var acl = Neo4ACL(options);
+
+```
