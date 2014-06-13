@@ -64,19 +64,30 @@ options = {
 ```
 ## Api
 ***
-### acl.addUserRoles( userId , roles, function(err, done) {})
-### acl.removeUserRoles( userId, roles, function(err, done) {})
-### acl.userRoles( userId, function(err, roles) {})
-### acl.userHasAllRoles( userId, roles, function(err, has) {})
-### acl.userHasAnyRole( userId, roles, function(err, has) {})
-### acl.addRoleParents( role, parents, function(err, done))
-### acl.removeRole( role, function(err, done) {})
-### acl.removeResource( resourceId, function(err, done) {})
-### acl.allow( roles, resources, permissions, function(err, done) {})
-### acl.removeAllow( roles, resources, permissions, function(err, done) {});
-### acl.allowedPermissions( userId, resources, function(err, resources) {});
-### acl.isAllowed(userId, resource, permissions, function(err, allowed) {});
-### acl.areAnyRolesAllowed( roles, resources, permissions, function(err, allowed) {});
+### acl.addUserRoles( userId , roles, callback(err, done) {})
+Give role(s) to user. 
+
+Parameters:
+
+- **userId** {String || Number} User id
+- **roles** {String || [String]} Role (or collection of roles) to give to user
+- **callback** {Function} [optional]
+	- **err**
+	- **done** {Boolean}
+
+
+### acl.removeUserRoles( userId, roles, callback(err, done) {})
+### acl.userRoles( userId, callback(err, roles) {})
+### acl.userHasAllRoles( userId, roles, callback(err, has) {})
+### acl.userHasAnyRole( userId, roles, callback(err, has) {})
+### acl.addRoleParents( role, parents, callback(err, done))
+### acl.removeRole( role, callback(err, done) {})
+### acl.removeResource( resourceId, callback(err, done) {})
+### acl.allow( roles, resources, permissions, callback(err, done) {})
+### acl.removeAllow( roles, resources, permissions, callback(err, done) {});
+### acl.allowedPermissions( userId, resources, callback(err, resources) {});
+### acl.isAllowed(userId, resource, permissions, callback(err, allowed) {});
+### acl.areAnyRolesAllowed( roles, resources, permissions, callback(err, allowed) {});
 
 ## Middleware generator
 ***
