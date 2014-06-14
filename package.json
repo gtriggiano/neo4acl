@@ -2,7 +2,7 @@
   "name": "Neo4acl",
   "version": "0.0.1",
   "description": "ACL library on top of Neo4j",
-  "main": "./lib/index.js",
+  "main": "./lib/Acl.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
