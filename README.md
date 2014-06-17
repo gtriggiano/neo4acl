@@ -74,9 +74,9 @@ options = {
 [acl.giveResourcesPermissions()](#giveResourcesPermissions)
 [acl.denyResourcesPermission()](#denyResourcesPermission)
 [acl.getUserResourcesPermissions()](#getUserResourcesPermissions)
-[acl.hasUserAllPermissionsResource()](#hasUserAllPermissionsResource)
-[acl.hasUserAnyPermissionsResource()](#hasUserAnyPermissionsResource)
-[acl.hasAnyGroupPermissionsResource()](#hasAnyGroupPermissionsResource)
+[acl.hasUserAllPermissionsOnResources()](#hasUserAllPermissionsOnResources)
+[acl.hasUserAnyPermissionsOnResources()](#hasUserAnyPermissionsOnResources)
+[acl.hasAnyGroupPermissionsOnResources()](#hasAnyGroupPermissionsOnResources)
 
 ----------
 
@@ -241,7 +241,7 @@ Returns an array of resources.
 
 ----------
 
-### acl.hasUserAllPermissionsResource( user_id, resources, permissions, cb(err, allowed) {}) {#hasUserAllPermissionsResource}
+### acl.hasUserAllPermissionsOnResources( user_id, resources, permissions, cb(err, allowed) {}) {#hasUserAllPermissionsOnResources}
 Parameters:
 
 - **user_id** {String || Number} User id
@@ -255,7 +255,7 @@ Checks if the user has ALL the listed permissions over all the listed resources.
 
 ----------
 
-### acl.hasUserAnyPermissionsResource( user_id, resources, permissions, cb(err, allowed) {}) {#hasUserAnyPermissionsResource}
+### acl.hasUserAnyPermissionsOnResources( user_id, resources, permissions, cb(err, allowed) {}) {#hasUserAnyPermissionsOnResources}
 Parameters:
 
 - **user_id** {String || Number} User id
@@ -269,7 +269,7 @@ For each of the listed resources, checks if the user has ANY of the listed permi
 
 ----------
     
-### acl.hasAnyGroupPermissionsResource( groups, resources, permissions, callback(err, allowed) {}) {#hasAnyGroupPermissionsResource}
+### acl.hasAnyGroupPermissionsOnResources( groups, resources, permissions, callback(err, allowed) {}) {#hasAnyGroupPermissionsOnResources}
 Parameters:
 
 - **groups** {String || [String, ...]} Group(s)
