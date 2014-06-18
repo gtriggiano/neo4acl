@@ -167,18 +167,31 @@ acl
 ## Api
 ***
 [acl.addUserToGroups()](#addUserToGroups)
+
 [acl.removeUserFromGroups()](#removeUserFromGroups)
+
 [acl.getUserGroups()](#getUserGroups)
+
 [acl.isUserInAllGroups()](#isUserInAllGroups)
+
 [acl.isUserInAnyGroup()](#isUserInAnyGroup)
+
 [acl.addGroupParents()](#addGroupParents)
+
 [acl.removeGroup()](#removeGroup)
+
 [acl.removeResource()](#removeResource)
+
 [acl.giveResourcesPermissions()](#giveResourcesPermissions)
+
 [acl.denyResourcesPermission()](#denyResourcesPermission)
+
 [acl.getResourcesPermissions()](#getResourcesPermissions)
+
 [acl.isAllowed()](#isAllowed)
+
 [acl.isAllowedAny()](#isAllowedAny)
+
 [acl.areAnyGroupsAllowed()](#areAnyGroupsAllowed)
 
 ----------
