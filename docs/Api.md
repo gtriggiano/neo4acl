@@ -38,7 +38,7 @@ var richpromise = acl.getUserGroups('giacomo', function(err, groups) {});
 will immediately query the database.
 The passed callback receives an eventual error from the db and the **api result**.
 
-**NOTE: in the example above 'groups' is not the direct result of the db query, but the value returned after the db result processing.**
+**NOTE: in the example above 'groups' is not the direct result of the database query, but the value returned by the database result processing (also called 'api result').**
 
 In this scenario `richpromise` is still a promise which will be resolved or rejected.
 ```javascript
@@ -53,9 +53,9 @@ I hear you...
 
 **Here you are!**
 
-The `query` and `parameters` property of every api call's result are tought to be exploited in a multi query transaction scenario.
+The `query` and `parameters` property of every promise resulting from an api call, are tought to be exploited in a multi query transaction scenario.
 
-In the following example you can also see the rationale behind the `parser` function.
+In the following example you can also see ho to use the `parser` function.
 
 For example:
 ```javascript
@@ -92,7 +92,7 @@ var acl = Neo4acl();
 
 // Let's say we already have two users in the graph
 // {_id:'giacomo'} and {_id:'bob'}
-// and no groups or resources
+// and no groups nor resources
 
 var giacomo_groups; // <- We'll use this variable later...
 
@@ -137,7 +137,7 @@ acl
     console.log('\nLet\'s wait 5 seconds....');
     setTimeout(function() {
       acl_query.execute();
-    }, 100);
+    }, 5000);
 
     acl_query.then(function(has_giacomo) {
       console.log(
