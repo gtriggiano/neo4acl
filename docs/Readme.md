@@ -167,7 +167,7 @@ acl
 
 ## Api
 ***
-[acl.addUserToGroups()](#-acladdusertogroups-user_id--groups-cberr-done-)
+[acl.addUserToGroups()](#acladdusertogroups-user_id--groups-cberr-done-)
 
 [acl.removeUserFromGroups()](#removeUserFromGroups)
 
