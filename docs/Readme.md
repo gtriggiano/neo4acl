@@ -167,11 +167,11 @@ acl
 
 ## Api
 ***
-[acl.addUserToGroups()](#acladdusertogroups-user_id--groups-cberr-done-)
+[acl.addUserToGroups()](#acladdusertogroups-user_id-groups-cberr-done-)
 
-[acl.removeUserFromGroups()](#removeUserFromGroups)
+[acl.removeUserFromGroups()](#aclremoveUserFromGroups-user_id-groups-cberr-done-)
 
-[acl.getUserGroups()](#getUserGroups)
+[acl.getUserGroups()](#aclgetUserGroups-user_id-cberr-groups-)
 
 [acl.isUserInAllGroups()](#isUserInAllGroups)
 
@@ -197,7 +197,7 @@ acl
 
 ----------
 
-### acl.addUserToGroups( user_id , groups, cb(err, done) )
+### acl.addUserToGroups( user_id, groups, cb(err, done) )
 Parameters:
 
 - **user_id** {String || Number} User id
