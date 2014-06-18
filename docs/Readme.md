@@ -167,7 +167,7 @@ acl
 
 ## Api
 ***
-[acl.addUserToGroups()](#addUserToGroups)
+[acl.addUserToGroups()](#-acladdusertogroups-user_id--groups-cberr-done-)
 
 [acl.removeUserFromGroups()](#removeUserFromGroups)
 
@@ -197,7 +197,7 @@ acl
 
 ----------
 
-### <a id="addUserToGroups" href="#addUserToGroups">\#)</a> acl.addUserToGroups( user_id , groups, cb(err, done) )
+### acl.addUserToGroups( user_id , groups, cb(err, done) )
 Parameters:
 
 - **user_id** {String || Number} User id
