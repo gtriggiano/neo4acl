@@ -27,7 +27,7 @@ richpromise.execute()
 
 This will trigger the query to the db, process the query results, and resolve the promise with the **api result** or reject it with an error from the db (if any).
 
-The promise can be *executed* just once. Any subsequent call to `richpromise.execute()`will not query the db anymore and just return the promise itself.
+The promise can be *executed* just once. Any subsequent call to `richpromise.execute()` will not query the db anymore and just return the promise itself.
 
 If you want that the api method immediately fires a query when you call it, just pass a callback as last parameter.
 So
@@ -55,9 +55,8 @@ I hear you...
 
 The `query` and `parameters` property of every promise resulting from an api call, are tought to be exploited in a multi query transaction scenario.
 
-In the following example you can also see ho to use the `parser` function.
+In the following example you can also see how to use the `parser` function.
 
-For example:
 ```javascript
 var seraph = require('seraph');
 var neo4j = seraph();
@@ -76,7 +75,7 @@ var txn = neo4j.batch();
         // 'groups' is an api result
     }));
     
-    txn.commit();
+    txn.commit(); // All queries are committed as a single transaction. <3
 
 ```
 ***
@@ -85,7 +84,7 @@ var txn = neo4j.batch();
 ## (not so) Quick API example
 
 ```javascript
-
+var util = require('util');
 var Neo4acl = require('neo4acl');
 
 var acl = Neo4acl();
@@ -144,7 +143,7 @@ acl
                   ['\nGiacomo has permissions \'view\', \'post\' and \'special_permission\'',
                    'on resources \'italian_content\', \'english_content\' and \'common_content\': ' + has_giacomo
                   ].join('\n')
-                 );
+                 ); // ->true
     });
 
     return acl_query;
@@ -172,13 +171,16 @@ acl
   })
   .then(function() {
     return acl.getUserGroups('giacomo', function(err, groups) {
-      giacomo_groups = groups; // Here we are...
+      // Let's use the 'giacomo_groups' variable to referece groups out of this scope
+      giacomo_groups = groups;
       console.log('\nGiacomo is in the following groups:');
       console.log(util.inspect(groups, {depth: null}));
     });
   })
   .then(function(g_groups) {
-    if (giacomo_groups === g_groups) console.log('\nIn Neo4acl the same objects are used both to resolve promises and to feed callbacks.');
+    if (giacomo_groups === g_groups) {
+      console.log('\n In Neo4acl the same objects are used both to resolve promises and to feed callbacks.');
+    }
   });
   
 ```
