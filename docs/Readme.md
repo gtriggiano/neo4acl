@@ -162,7 +162,7 @@ acl
   
 ```
 ## Graph desing
-![Grafo](img/base_graph.svg)
+![Grafo](img/base_graph.png)
 
 
 ## Api
