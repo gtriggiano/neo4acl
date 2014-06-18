@@ -2,7 +2,7 @@
 
 
 # Api
-[Jump to API index.](#index)
+[Jump to API index.](#api-index)
 ## A (rich) promise in return...
 Every api method returns a [Bluebird][1] promise, decorated with the following properties:
 
@@ -79,7 +79,7 @@ var txn = neo4j.batch();
 
 ```
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ## (not so) Quick API example
 
@@ -231,7 +231,7 @@ Parameters:
 
 Ad the user to the listed groups.
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.removeUserFromGroups( user_id, groups [, cb(err, done)] )
 Parameters:
@@ -244,7 +244,7 @@ Parameters:
 
 Removes the user from the listed groups.
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.getUserGroups( user_id [, cb(err, groups)] )
 Parameters:
@@ -283,7 +283,7 @@ In other words there is no **real** tracking of user memberships in time.
 
 
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.isUserInAllGroups( user_id, groups [, cb(err, bool)] )
 Parameters:
@@ -296,7 +296,7 @@ Parameters:
 
 Checks if the user belongs to each of the listed groups
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.isUserInAnyGroup( user_id, groups [, cb(err, bool)] )
 Parameters:
@@ -309,7 +309,7 @@ Parameters:
 
 Checks if the user belongs to any of the listed groups
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.addGroupParents( group, parents [, cb(err, done)] )
 Parameters:
@@ -322,7 +322,7 @@ Parameters:
 
 Set the given group as belonging to the listed parent groups.
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.removeGroup( group [, cb(err, done)] )
 Parameters:
@@ -334,7 +334,7 @@ Parameters:
 
 Removes the group and all it's permissions from the system.
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.removeResource( resource_name [, cb(err, done)] )
 Parameters:
@@ -346,7 +346,7 @@ Parameters:
 
 Removes the resource from the system.
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.giveResourcesPermissions( groups, resources, permissions [, cb(err, done)] )
 Parameters:
@@ -360,7 +360,7 @@ Parameters:
 
 Gives to the listed groups the listed permissions over the listed resources.
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.denyResourcesPermission( groups, resources, permissions [, cb(err, done)] )
 Parameters:
@@ -374,7 +374,7 @@ Parameters:
 
 Removes the listed permissions over the listed resources from the listed groups.
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.getResourcesPermissions( user_id, resources [, cb(err, resources)] )
 Parameters:
@@ -397,7 +397,7 @@ Parameters:
 Checks the permissions a user has over the listed resources.
 Returns an array of resources.
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.isAllowed( user_id, resources, permissions [, cb(err, allowed)] )
 Parameters:
@@ -411,7 +411,7 @@ Parameters:
 
 Checks if the user has ALL the listed permissions over all the listed resources.
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.isAllowedAny(user_id, resources, permissions [, cb(err, allowed)] )
 Parameters:
@@ -425,7 +425,7 @@ Parameters:
 
 For each of the listed resources, checks if the user has ANY of the listed permission.
 ***
-[Jump to top.](#api) -  [Jump to API index.](#index) 
+[Jump to top.](#api) -  [Jump to API index.](#api-index) 
 ***
 ### acl.areAnyRolesAllowed( groups, resources, permissions [, callback(err, allowed)] )
 Parameters:
