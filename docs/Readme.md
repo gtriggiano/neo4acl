@@ -197,7 +197,7 @@ acl
 
 ----------
 
-### acl.addUserToGroups( user_id , groups, cb(err, done) {}) {#addUserToGroups}
+### <a id="addUserToGroups"></a>acl.addUserToGroups( user_id , groups, cb(err, done) {}
 Parameters:
 
 - **user_id** {String || Number} User id
@@ -210,7 +210,7 @@ Ad the user to the listed groups.
 
 ----------
 
-### acl.removeUserFromGroups( user_id, groups, cb(err, done) {}) {#removeUserFromGroups}
+### <a id="removeUserFromGroups"></a>acl.removeUserFromGroups( user_id, groups, cb(err, done) )
 Parameters:
 
 - **user_id** {String || Number} User id
@@ -223,7 +223,7 @@ Removes the user from the listed groups.
 
 ----------
 
-### acl.getUserGroups( user_id, cb(err, groups) {}) {#getUserGroups}
+### <a id="getUserGroups"></a>acl.getUserGroups( user_id, cb(err, groups) )
 Parameters:
 
 - **user_id** {String || Number} User id
@@ -245,7 +245,7 @@ For each group, the ```distance``` property tells if the user is a direct member
 
 ----------
 
-### acl.isUserInAllGroups( user_id, groups, cb(err, bool) {}) {#isUserInAllGroups}
+### <a id="isUserInAllGroups"></a>acl.isUserInAllGroups( user_id, groups, cb(err, bool) )
 Parameters:
 
 - **user_id** {String || Number} User id 
@@ -258,7 +258,7 @@ Checks if the user belongs to each of the listed groups
 
 ----------
 
-### acl.isUserInAnyGroup( user_id, groups, cb(err, bool) {}) {#isUserInAnyGroup}
+### <a id="isUserInAnyGroup"></a>acl.isUserInAnyGroup( user_id, groups, cb(err, bool) )
 Parameters:
 
 - **user_id** {String || Number} User id 
@@ -271,7 +271,7 @@ Checks if the user belongs to any of the listed groups
 
 ----------
 
-### acl.addGroupParents( group, parents, cb(err, done)) {#addGroupParents}
+### <a id="addGroupParents"></a>acl.addGroupParents( group, parents, cb(err, done) )
 Parameters:
 
 - **group** {String} Group
@@ -284,7 +284,7 @@ Set the given group as belonging to the listed parent groups.
 
 ----------
 
-### acl.removeGroup( group, cb(err, done) {}) {#removeGroup}
+### <a id="removeGroup"></a>acl.removeGroup( group, cb(err, done) )
 Parameters:
 
 - **group** {String} Group
@@ -296,7 +296,7 @@ Removes the group and all it's permissions from the system.
 
 ----------
 
-### acl.removeResource( resource_name, cb(err, done) {}) {#removeResource}
+### <a id="removeResource"></a>acl.removeResource( resource_name, cb(err, done) )
 Parameters:
 
 - **resource_name** {String} Resource name
@@ -308,7 +308,7 @@ Removes the resource from the system.
 
 ----------
 
-### acl.giveResourcesPermissions( groups, resources, permissions, cb(err, done) {}) {#giveResourcesPermissions}
+### <a id="giveResourcesPermissions"></a>acl.giveResourcesPermissions( groups, resources, permissions, cb(err, done) )
 Parameters:
 
 - **groups** {String || [String, ...]} Group(s)
@@ -322,7 +322,7 @@ Gives to the listed groups the listed permissions over the listed resources.
 
 ----------
 
-### acl.denyResourcesPermission( groups, resources, permissions, cb(err, done) {}) {#denyResourcesPermission}
+### <a id="denyResourcesPermission"></a>acl.denyResourcesPermission( groups, resources, permissions, cb(err, done) )
 Parameters:
 
 - **groups** {String || [String, ...]} Group(s)
@@ -336,7 +336,7 @@ Removes the listed permissions over the listed resources from the listed groups.
 
 ----------
 
-### acl.getResourcesPermissions( user_id, resources, cb(err, resources) {}) {#getResourcesPermissions}
+### <a id="getResourcesPermissions"></a>acl.getResourcesPermissions( user_id, resources, cb(err, resources) )
 Parameters:
 
 - **user_id** {String || Number} User id
@@ -358,7 +358,7 @@ Returns an array of resources.
 
 ----------
 
-### acl.isAllowed( user_id, resources, permissions, cb(err, allowed) {}) {#isAllowed}
+### <a id="isAllowed"></a>acl.isAllowed( user_id, resources, permissions, cb(err, allowed) )
 Parameters:
 
 - **user_id** {String || Number} User id
@@ -372,7 +372,7 @@ Checks if the user has ALL the listed permissions over all the listed resources.
 
 ----------
 
-### acl.isAllowedAny(user_id, resources, permissions, cb(err, allowed) {}) {#isAllowedAny}
+### <a id="isAllowedAny"></a>acl.isAllowedAny(user_id, resources, permissions, cb(err, allowed) )
 Parameters:
 
 - **user_id** {String || Number} User id
@@ -386,7 +386,7 @@ For each of the listed resources, checks if the user has ANY of the listed permi
 
 ----------
     
-### acl.areAnyRolesAllowed( groups, resources, permissions, callback(err, allowed) {}) {#areAnyRolesAllowed}
+### <a id="areAnyRolesAllowed"></a>acl.areAnyRolesAllowed( groups, resources, permissions, callback(err, allowed) )
 Parameters:
 
 - **groups** {String || [String, ...]} Group(s)
