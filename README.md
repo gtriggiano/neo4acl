@@ -66,7 +66,7 @@ options = {
 
 
 ```
-## (not so) Quick example
+## (not so) Quick API example
 ```javascript
 var Neo4acl = require('neo4acl');
 
