@@ -257,7 +257,8 @@ Parameters:
         groups = [
                     {
                         name: 'Role name',
-                        distance: 1
+                        distance: 1,
+                        since: timestamp()
                     },
                     {...}
                 ] 
@@ -265,6 +266,22 @@ Parameters:
 Returns an array of the groups the user belongs to.
 
 For each group, the ```distance``` property tells if the user is a direct member of the group (if ```distance === 1```) or if she's N groups away.
+The `since` indicates the date the user became member of the group, expressed in milliseconds since midnight, January 1, 1970 UTC.
+
+**Note on how `since` is calculated:**
+
+The library will first search for all the paths that connect the user to a group she's member of.
+
+For every path, all the `BELOGNS_TO` relationships are reduced to find the one that was most recently created. This relationship's creation date is assumed as the "path creation date".
+
+Then, for every group that the user belongs to, all the paths leading to it are compared to find the oldest one, and its creation date is assumed as the date since when the user belongs to the group.
+
+In other words there is no **real** tracking of user memberships in time.
+
+**"Simply put": given a certain state of the graph, you can only know the date from which a user is a member of a certain group for sure, but you can not know if she's already been a member of that group prior to that date.**
+
+
+
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
