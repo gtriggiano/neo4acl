@@ -197,7 +197,7 @@ acl
 
 ----------
 
-### <span id="addUserToGroups">-></span> acl.addUserToGroups( user_id , groups, cb(err, done) {}
+### <a id="addUserToGroups" href="#addUserToGroups">\#)</a> acl.addUserToGroups( user_id , groups, cb(err, done) )
 Parameters:
 
 - **user_id** {String || Number} User id
@@ -210,7 +210,7 @@ Ad the user to the listed groups.
 
 ----------
 
-### <a id="removeUserFromGroups"></a>acl.removeUserFromGroups( user_id, groups, cb(err, done) )
+### acl.removeUserFromGroups( user_id, groups, cb(err, done) )
 Parameters:
 
 - **user_id** {String || Number} User id
@@ -223,7 +223,7 @@ Removes the user from the listed groups.
 
 ----------
 
-### <a id="getUserGroups"></a>acl.getUserGroups( user_id, cb(err, groups) )
+### acl.getUserGroups( user_id, cb(err, groups) )
 Parameters:
 
 - **user_id** {String || Number} User id
