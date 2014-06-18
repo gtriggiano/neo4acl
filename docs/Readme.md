@@ -169,9 +169,9 @@ acl
 ***
 [acl.addUserToGroups()](#acladdusertogroups-user_id-groups-cberr-done-)
 
-[acl.removeUserFromGroups()](#aclremoveUserFromGroups-user_id-groups-cberr-done-)
+[acl.removeUserFromGroups()](#aclremoveuserfromgroups-user_id-groups-cberr-done-)
 
-[acl.getUserGroups()](#aclgetUserGroups-user_id-cberr-groups-)
+[acl.getUserGroups()](#aclgetusergroups-user_id-cberr-groups-)
 
 [acl.isUserInAllGroups()](#isUserInAllGroups)
 
