@@ -171,7 +171,7 @@ acl
   })
   .then(function() {
     return acl.getUserGroups('giacomo', function(err, groups) {
-      // Let's use the 'giacomo_groups' variable to referece groups out of this scope
+      // Let's use the 'giacomo_groups' variable to reference groups out of this scope
       giacomo_groups = groups;
       console.log('\nGiacomo is in the following groups:');
       console.log(util.inspect(groups, {depth: null}));
