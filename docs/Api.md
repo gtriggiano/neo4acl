@@ -187,7 +187,7 @@ acl
 ***
 [Jump to top.](#api)
 ***
-## Index
+## API index
 
 
 [acl.addUserToGroups()](https://github.com/gtriggiano/neo4acl/blob/master/docs/Api.md#acladdusertogroups-user_id-groups--cberr-done-)
@@ -278,7 +278,7 @@ Then, for every group that the user belongs to, all the paths leading to it are 
 
 In other words there is no **real** tracking of user memberships in time.
 
-**"Simply put": given a certain state of the graph, you can only know the date from which a user is a member of a certain group for sure, but you can not know if she's already been a member of that group prior to that date.**
+**Simply put: given a certain state of the graph, you can only know the date from which a user is a member of a certain group for sure, but you can not know if she's already been a member of that group prior to that date.**
 
 
 
