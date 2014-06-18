@@ -190,9 +190,9 @@ acl
 ## Index
 
 
-[acl.addUserToGroups()](#acladdusertogroups-user_id-groups-cberr-done-)
+[acl.addUserToGroups()](#acladdusertogroups-user_id-groups--cberr-done-)
 
-[acl.removeUserFromGroups()](#aclremoveuserfromgroups-user_id-groups-cberr-done-)
+[acl.removeUserFromGroups()](https://github.com/gtriggiano/neo4acl/blob/master/docs/Api.md#aclremoveuserfromgroups-user_id-groups--cberr-done-)
 
 [acl.getUserGroups()](#aclgetusergroups-user_id-cberr-groups-)
 
