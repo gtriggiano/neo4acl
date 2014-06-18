@@ -1,7 +1,7 @@
 # Connect/Express Middlewares
 
 
-## Quick connect/express middleware example
+## Quick example
 
 ```javascript
 

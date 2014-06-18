@@ -51,6 +51,9 @@ options = {
     				
     belongs:					Name of the relation connecting user to group and group to group
     							Default: 'BELONGS_TO'
+                                
+    belongs_since_key:          Name of the relation property containing the timestamp() of the relation creation
+                                Default: 'since'
     				
     has_permission: 			Name of the relation connecting group to resource
 	    						Default: 'HAS_PERMISSION'
