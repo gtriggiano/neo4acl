@@ -197,7 +197,7 @@ acl
 
 ----------
 
-### <a id="addUserToGroups">-></a> acl.addUserToGroups( user_id , groups, cb(err, done) {}
+### <span id="addUserToGroups">-></span> acl.addUserToGroups( user_id , groups, cb(err, done) {}
 Parameters:
 
 - **user_id** {String || Number} User id
