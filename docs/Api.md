@@ -220,12 +220,12 @@ acl
 
 ----------
 
-### acl.addUserToGroups( user_id, groups, cb(err, done) )
+### acl.addUserToGroups( user_id, groups [, cb(err, done)] )
 Parameters:
 
 - **user_id** {String || Number} User id
 - **groups** {String || [String, ...]} Group(s)
-- **cb** {Function} [optional]
+- **cb** {Function}
 	- **err** {Object} A Neo4j REST API Layer error
 	- **done** {Boolean}
 
@@ -233,12 +233,12 @@ Ad the user to the listed groups.
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### acl.removeUserFromGroups( user_id, groups, cb(err, done) )
+### acl.removeUserFromGroups( user_id, groups [, cb(err, done)] )
 Parameters:
 
 - **user_id** {String || Number} User id
 - **groups** {String || [String, ...]} Group(s)
-- **cb** {Function} [optional]
+- **cb** {Function}
 	- **err** {Object} A Neo4j REST API Layer error
 	- **done** {Boolean}
 
@@ -246,11 +246,11 @@ Removes the user from the listed groups.
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### acl.getUserGroups( user_id, cb(err, groups) )
+### acl.getUserGroups( user_id [, cb(err, groups)] )
 Parameters:
 
 - **user_id** {String || Number} User id
-- **cb** {Function} [Optional]
+- **cb** {Function}
     - **err** {Object} A Neo4j REST API Layer error
     - **groups** {Array} The list of groups the user belongs to
 ```javascript
@@ -285,12 +285,12 @@ In other words there is no **real** tracking of user memberships in time.
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### <a id="isUserInAllGroups"></a>acl.isUserInAllGroups( user_id, groups, cb(err, bool) )
+### acl.isUserInAllGroups( user_id, groups [, cb(err, bool)] )
 Parameters:
 
 - **user_id** {String || Number} User id 
 - **groups** {String || [String, ...]} Group(s)
-- **cb** {Function} [Optional]
+- **cb** {Function}
     - **err** {Object} A Neo4j REST API Layer error
     - **bool** {Boolean}
 
@@ -298,12 +298,12 @@ Checks if the user belongs to each of the listed groups
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### <a id="isUserInAnyGroup"></a>acl.isUserInAnyGroup( user_id, groups, cb(err, bool) )
+### acl.isUserInAnyGroup( user_id, groups [, cb(err, bool)] )
 Parameters:
 
 - **user_id** {String || Number} User id 
 - **groups** {String || [String, ...]} Group(s)
-- **cb** {Function} [Optional]
+- **cb** {Function}
     - **err** {Object} A Neo4j REST API Layer error
     - **bool** {Boolean}
 
@@ -311,12 +311,12 @@ Checks if the user belongs to any of the listed groups
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### <a id="addGroupParents"></a>acl.addGroupParents( group, parents, cb(err, done) )
+### acl.addGroupParents( group, parents [, cb(err, done)] )
 Parameters:
 
 - **group** {String} Group
 - **parents** {String || [String, ...]} Parent(s)
-- **cb** {Function} [Optional]
+- **cb** {Function}
     - **err** {Object} A Neo4j REST API Layer error
     - **done** {Boolean}
 
@@ -324,11 +324,11 @@ Set the given group as belonging to the listed parent groups.
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### <a id="removeGroup"></a>acl.removeGroup( group, cb(err, done) )
+### acl.removeGroup( group [, cb(err, done)] )
 Parameters:
 
 - **group** {String} Group
-- **cb** {Function} [Optional]
+- **cb** {Function}
     - **err** {Object} A Neo4j REST API Layer error
     - **done** {Boolean}
 
@@ -336,11 +336,11 @@ Removes the group and all it's permissions from the system.
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### <a id="removeResource"></a>acl.removeResource( resource_name, cb(err, done) )
+### acl.removeResource( resource_name [, cb(err, done)] )
 Parameters:
 
 - **resource_name** {String} Resource name
-- **cb** {Function} [Optional]
+- **cb** {Function}
     - **err** {Object} A Neo4j REST API Layer error
     - **done** {Boolean}
 
@@ -348,13 +348,13 @@ Removes the resource from the system.
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### <a id="giveResourcesPermissions"></a>acl.giveResourcesPermissions( groups, resources, permissions, cb(err, done) )
+### acl.giveResourcesPermissions( groups, resources, permissions [, cb(err, done)] )
 Parameters:
 
 - **groups** {String || [String, ...]} Group(s)
 - **resources** {String || [String, ...]} Resource(s)
 - **permissions** {String || [String, ...] Permission(s)
-- **cb** {Function} [Optional]
+- **cb** {Function}
     - **err** {Object} A Neo4j REST API Layer error
     - **done** {Boolean}
 
@@ -362,13 +362,13 @@ Gives to the listed groups the listed permissions over the listed resources.
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### <a id="denyResourcesPermission"></a>acl.denyResourcesPermission( groups, resources, permissions, cb(err, done) )
+### acl.denyResourcesPermission( groups, resources, permissions [, cb(err, done)] )
 Parameters:
 
 - **groups** {String || [String, ...]} Group(s)
 - **resources** {String || [String, ...]} Resource(s)
 - **permissions** {String || [String, ...] Permission(s)
-- **cb** {Function} [Optional]
+- **cb** {Function}
     - **err** {Object} A Neo4j REST API Layer error
     - **done** {Boolean}
 
@@ -376,12 +376,12 @@ Removes the listed permissions over the listed resources from the listed groups.
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### <a id="getResourcesPermissions"></a>acl.getResourcesPermissions( user_id, resources, cb(err, resources) )
+### acl.getResourcesPermissions( user_id, resources [, cb(err, resources)] )
 Parameters:
 
 - **user_id** {String || Number} User id
 - **resources** {String || [String, ...]} Resource(s)
-- **cb** {Function} [Optional]
+- **cb** {Function}
     - **err** {Object} A Neo4j REST API Layer error
     - **resources** {Array}
 ```javascript
@@ -393,18 +393,19 @@ Parameters:
                         {...}
                     ]
 ```
+
 Checks the permissions a user has over the listed resources.
 Returns an array of resources.
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### <a id="isAllowed"></a>acl.isAllowed( user_id, resources, permissions, cb(err, allowed) )
+### acl.isAllowed( user_id, resources, permissions [, cb(err, allowed)] )
 Parameters:
 
 - **user_id** {String || Number} User id
 - **resources** {String || [String, ...]} Resource(s)
 - **permissions** {String || [String, ...] Permission(s)
-- **cb** {Function} [Optional]
+- **cb** {Function}
     - **err** {Object} A Neo4j REST API Layer error
     - **allowed** {Boolean}
 
@@ -412,13 +413,13 @@ Checks if the user has ALL the listed permissions over all the listed resources.
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### <a id="isAllowedAny"></a>acl.isAllowedAny(user_id, resources, permissions, cb(err, allowed) )
+### acl.isAllowedAny(user_id, resources, permissions [, cb(err, allowed)] )
 Parameters:
 
 - **user_id** {String || Number} User id
 - **resources** {String || [String, ...]} Resource(s)
 - **permissions** {String || [String, ...] Permission(s)
-- **cb** {Function} [Optional]
+- **cb** {Function}
     - **err** {Object} A Neo4j REST API Layer error
     - **allowed** {Boolean}
 
@@ -426,13 +427,13 @@ For each of the listed resources, checks if the user has ANY of the listed permi
 ***
 [Jump to top.](#api) -  [Jump to API index.](#index) 
 ***
-### <a id="areAnyRolesAllowed"></a>acl.areAnyRolesAllowed( groups, resources, permissions, callback(err, allowed) )
+### acl.areAnyRolesAllowed( groups, resources, permissions [, callback(err, allowed)] )
 Parameters:
 
 - **groups** {String || [String, ...]} Group(s)
 - **resources** {String || [String, ...]} Resource(s)
 - **permissions** {String || [String, ...] Permission(s)
-- **cb** {Function} [Optional]
+- **cb** {Function}
     - **err** {Object} A Neo4j REST API Layer error
     - **allowed** {Boolean}
 
