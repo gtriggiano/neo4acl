@@ -190,13 +190,13 @@ acl
 ## Index
 
 
-[acl.addUserToGroups()](#acladdusertogroups-user_id-groups--cberr-done-)
+[acl.addUserToGroups()](https://github.com/gtriggiano/neo4acl/blob/master/docs/Api.md#acladdusertogroups-user_id-groups--cberr-done-)
 
 [acl.removeUserFromGroups()](https://github.com/gtriggiano/neo4acl/blob/master/docs/Api.md#aclremoveuserfromgroups-user_id-groups--cberr-done-)
 
-[acl.getUserGroups()](#aclgetusergroups-user_id-cberr-groups-)
+[acl.getUserGroups()](https://github.com/gtriggiano/neo4acl/blob/master/docs/Api.md#aclgetusergroups-user_id--cberr-groups-)
 
-[acl.isUserInAllGroups()](#isUserInAllGroups)
+[acl.isUserInAllGroups()](https://github.com/gtriggiano/neo4acl/blob/master/docs/Api.md#aclisuserinallgroups-user_id-groups--cberr-bool-)
 
 [acl.isUserInAnyGroup()](#isUserInAnyGroup)
 
